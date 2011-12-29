@@ -1,0 +1,7 @@
+//设置div的位置
+//document.getElementById("floating_fade_Message").style.top=(document.documentElement.scrollTop+(document.documentElement.clientHeight-document.getElementById("floating_fade_Message").offsetHeight)/2)+"px";
+//document.getElementById("floating_fade_Message").style.left=(document.documentElement.scrollLeft+(document.documentElement.clientWidth-document.getElementById("floating_fade_Message").offsetWidth)/2)+"px";
+$("#floating_fade_message").html("<%=@floating_fade_message%>");
+$("#recommand_span").html("<%=@article.useful_num %>")
+show_floating_fade_message();
+

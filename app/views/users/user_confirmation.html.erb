@@ -1,0 +1,8 @@
+<% case @result %>
+    <% when "s" %>
+        <%= render :template => 'users/_user_confirmation_pass' %>
+    <% when "e1"%>
+        <%= render :template => 'users/_user_confirmation_failure' %>
+    <% when "e2"%>
+        <%= render :template => 'users/_user_confirmed' %>
+<%end%>

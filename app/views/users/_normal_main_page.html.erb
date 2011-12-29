@@ -1,0 +1,98 @@
+<%= stylesheet_link_tag "setting" %>
+<div>
+  <h1><%=@current_user.name %>的账号管理</h1>
+  <%= render :template => 'common_partials/fade_message' %>
+  <br/>
+  <table>
+      <tr>
+        <td width="70px">
+          <%= label_tag '头像:' %>
+        </td>
+        <td>
+          <% if !@current_user.avatar_file_name %>
+            <%= image_tag "/images/default_user_avatar.jpg" %> <br/>
+          <%else%>
+            <%= image_tag @current_user.avatar.url(:small), :id=>"avatar" %>
+          <%end%>
+          <a href="#" class="action" id="reset_avatar">修改</a>
+        </td>
+      </tr>
+    <tr>
+      <td width="70px">
+      </td>
+      <td>
+        <div id="div_reset_avatar">
+          <%= form_for(@current_user, :url => user_path(:format => 'js') , :remote => true, :html=> {:multipart=>true, :target =>"upload_frame"}) do |f| %>
+             <%= f.file_field :avatar, :class=>'file_upload'%>
+             <%=f.submit("上传")%>
+          <% end %>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <%= form_for(@current_user) do |f| %>
+    <table>
+      <tr>
+        <td width="70px">
+          <%= f.label '登录邮箱:' %>
+        </td>
+        <td>
+          <%= @current_user.email %> <a href="#" class="action" id="change_email">修改邮箱</a>  <br/>
+          <div class="action" id="div_change_email">
+            <%= f.text_field :email, :size => 50 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label '网上名称:' %>
+        </td>
+        <td>
+          <%= @current_user.name %>  <a href="#" class="action" id="change_name">修改</a>
+          <div class="action" id="div_change_name">
+            <%= f.text_field :name, :size => 20 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label '常住城市:' %>
+        </td>
+        <td>
+          <span id="span_city"><%= @current_user.city_name %></span>  <a href="#" class="action" id="change_city">修改</a>
+          <%= f.hidden_field :city_name%>
+          <%= f.hidden_field :city_id%>
+          <div class="action" id="div_change_city">
+                <%= render :template => 'users/_show_location' %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label '自我介绍:' %>
+        </td>
+        <td>
+          <%= f.text_area :self_desc, :rows => 3, :cols => 70 %> <br/>
+          (还可以输入<span id="desc_count">80</span>字)
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= f.label '签名:' %>
+        </td>
+        <td>
+          <%= f.text_area :signature, :rows => 2, :cols => 70 %>
+          (还可以输入<span id="signature_count">80</span>字)
+        </td>
+      </tr>
+
+    </table>
+    <div class="actions">
+        <%= f.submit '更新' %>
+    </div>
+  <% end %>
+</div>
+<iframe id='upload_frame' name="upload_frame" style="width:1px;height:1px;border:0px" src="about:blank"></iframe>
+

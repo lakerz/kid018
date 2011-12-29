@@ -1,0 +1,9 @@
+亲爱的 <%= @register_user.name %> ，
+
+感谢您注册成为“家有宝贝”网的正式用户！为确保您能及时获得我们所提供的各项服务，请您点击以下的链接，或者将其复制到浏览器中，以完成注册确认。
+
+http://127.0.0.1:3000/users/user_confirmation?userid=<%= @register_user.id %>&confirm_code=<%= @register_user.confirm_code %>
+
+
+谢谢！
+家有宝贝

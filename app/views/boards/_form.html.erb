@@ -1,0 +1,33 @@
+<%= form_for(@board, :html=> {:multipart=>true}) do |f| %>
+  <% if @board.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
+
+      <ul>
+      <% @board.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br />
+    <%= f.text_field :memo %>
+  </div>
+
+  <div class="field" >
+    <%= image_tag @board.avatar.url(:medium) %> <br/>
+    <%= f.label "更新主板头像" %><br />
+    <%= f.file_field :avatar%>
+  </div>
+
+  <div class="actions">
+    <%=f.submit(:onclick => "try_it(f.load_img_file.data);return false;")%>
+  </div>
+
+<% end %>

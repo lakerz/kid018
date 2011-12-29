@@ -1,0 +1,25 @@
+<!--用于显示登录界面-->
+
+<div style='display:none'>
+  <div id='inline_login' style='padding:10px; background:#fff;'>
+        <% form_tag login_check_users_path, :id=>'loginForm' do %>
+          邮箱 <%= text_field_tag "loginName", "", :size=>25 %> <br/><br/>
+          密码 <%= password_field_tag "password", "", :size=>25%> <br/><br/>
+          <%= hidden_field_tag "source_type", "partial" %>
+          <%= hidden_field_tag "source_page", request.request_uri %>
+          <%= hidden_field_tag "submitter_id", "" %>
+          <%= hidden_field_tag "click_id", "" %>
+          <%= submit_tag "登录"%>
+          <%=link_to "注册新用户", new_user_path %>
+        <% end %>
+        <ul id="errorBox"></ul>
+  </div>
+
+</div>
+
+<% content_for :js_loaded do  %>
+    <%= javascript_include_tag "plugins/jquery.validate.min" %>
+    <%= javascript_include_tag "plugins/additional-methods.min" %>
+    <%= javascript_include_tag "plugins/validation_message_cn" %>
+    <%= javascript_include_tag "page_js/user_login_partial" %>
+<% end %>

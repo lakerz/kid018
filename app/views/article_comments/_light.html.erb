@@ -1,0 +1,7 @@
+<div id="light_<%=article_comment.id %>">
+    <% if article_comment.lighted %>
+        <%= link_to "熄灭", {:controller=>"article_comments", :action=>"light", :id=>article_comment, :set=>"off"}, :method => "get", :remote => true %>
+    <% else %>
+        <%= link_to "点亮", {:controller=>"article_comments", :action=>"light", :id=>article_comment, :set=>"on"}, :method => "get", :remote => true %>
+    <% end%>
+</div>

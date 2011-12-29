@@ -1,0 +1,15 @@
+<% if @show_login %>
+    <% if !@current_user %>
+        <% if @goto_login_page %>
+            <%= link_to "登录", login_users_path %>
+        <%else %>
+            <a class='login_pop' href="#inline_login">登录</a>
+        <%end%>
+        |
+        <%=link_to "注册", new_user_path %>
+    <%else%>
+        <%=link_to @current_user.name, main_page_user_path(@current_user) %>
+        |
+        <%=link_to "退出", logout_users_path %>
+    <%end%>
+<%end%>

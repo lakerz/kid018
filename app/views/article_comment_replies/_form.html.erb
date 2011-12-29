@@ -1,0 +1,10 @@
+<%= form_for(@article_comment_reply) do |f| %>
+  <%= f.hidden_field :comment_id%>
+  <div id="commentReply">
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit(:onclick => "parent.$.colorbox.close()")%>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<html>
+<body style="font-family: verdana, arial, helvetica, sans-serif;font-size:14px;">
+<p>
+亲爱的 <%= @register_user.name %> ，
+</p>
+
+<p>
+  感谢您注册成为“家有宝贝”网的正式用户！为确保您能及时获得我们所提供的各项服务，请您点击以下的链接完成注册确认。
+  <br/><br/>
+  <a href="http://127.0.0.1:3000/users/user_confirmation?userid=<%= @register_user.id %>&confirm_code=<%= @register_user.confirm_code %>">点击完成邮箱确认</a>
+  <br/><br/>
+  如果上面的链接有问题，请直接复制以下链接到浏览器中
+  <br/>
+  http://127.0.0.1:3000/users/user_confirmation?userid=<%= @register_user.id %>&confirm_code=<%= @register_user.confirm_code %>
+</p>
+<br>
+<p>
+  家有宝贝
+</p>
+</body>
+</html>

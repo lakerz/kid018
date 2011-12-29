@@ -1,0 +1,14 @@
+<h1>欢迎登录</h1>    <br/>
+
+<% form_tag login_users_path, :id=>'loginForm' do %>
+  名称 <%= text_field_tag "loginName"%> <br/><br/>
+  密码 <%= password_field_tag "password"%> <br/><br/>
+  <%= submit_tag "登录"%>
+<% end %>
+
+<% content_for :js_loaded do  %>
+    <%= javascript_include_tag "page_js/jquery.validate.min" %>
+    <%= javascript_include_tag "page_js/additional-methods.min" %>
+    <%= javascript_include_tag "page_js/validation_message_cn" %>
+    <%= javascript_include_tag "page_js/user_login" %>
+<% end %>

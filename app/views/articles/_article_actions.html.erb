@@ -1,0 +1,13 @@
+<% if @current_user %>
+    <%=link_to "推荐", recommand_article_path, :remote=>true %>
+    |
+    <%=link_to "收藏", add_favorite_article_path, :remote => true %> |
+<% else %>
+    <a class='login_pop' href="#inline_login">推荐</a>
+    |
+    <a class='login_pop' href="#inline_login">收藏</a>
+<% end %>
+分享到:
+<script type="text/javascript" charset="utf-8">
+share_to_sina("<%=@article.title %>");
+</script>

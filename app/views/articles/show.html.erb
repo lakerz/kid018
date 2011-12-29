@@ -1,0 +1,82 @@
+<%= stylesheet_link_tag "article" %>
+
+<div id="showArticleMain">
+    <div id="articleRegion">
+        <div id="title">
+          <%= @article.title %>
+        </div>
+        <div id="authorRegion">
+            <div id="authorAvatar">
+                <%= image_tag("user-avatar.jpg") %>
+            </div>
+            <div id="authorInfo">
+                ABC @ 2011-05-20 20:33:22
+              <br/>
+              阅读: <%=@article.read_num %> | 推荐: <span id="recommand_span"><%=@article.useful_num %></span> | 收藏: <span id="favorite_span">100</span> | 回复: <%= @article.article_comments.size %>
+            </div>
+            <div style="clear:both">
+                <%= render :template => 'articles/_article_actions'%>
+            </div>
+        </div>
+        <div id="abstractRegion">
+          <div id="abstractAvatar">
+            <%= image_tag (@article.avatar.url(:medium)) %>
+          </div>
+          <div id="abstract">
+            <%= strip_tags @article.abstract %>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
+        <div id="content">
+            <%= raw(@article.content)%>
+        </div>
+        <div id="commentRegion">
+
+            <%= render :template => 'articles/_reply_article'%>
+
+            <% if @lighted_comments.size > 0 %>
+                <div id="lightedCommentRegion">
+                    <div id="lightedText"><strong>这些留言亮了:<%=@lighted_comments.size %></strong></div>
+                    <% @lighted_comments.each do |article_comment| %>
+                        <%= render(article_comment) %>
+                    <%end%>
+                </div>
+            <% end %>
+
+            <a name="comment"></a>
+            <div id="commentList">
+                <%= will_paginate @article_comments, :previous_label=>"上一页", :next_label=>"下一页"%>
+                <% @article_comments.each do |article_comment| %>
+                    <%= render(article_comment) %>
+                <%end%>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="rightPanel">
+
+    </div>
+</div>
+<div style="clear:both">
+  <%= will_paginate @article_comments, :previous_label=>"上一页", :next_label=>"下一页"%>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+
+    <div style='display:none'>
+      <div id='inline_content' style='padding:10px; background:#fff;'>
+          <% form_tag article_comment_replies_path, :remote=>true do %>
+              <%= hidden_field_tag "comment_id", @article.id %>
+              <%= text_area_tag "commentReplyContent", "" %> <br/>
+              <%= submit_tag "回复"%>
+          <% end %>
+      </div>
+    </div>
+</div>
+<%= render :template => 'common_partials/floating_fade_message' %>
+
+<% content_for :js_loaded do  %>
+    <%= javascript_include_tag "page_js/replycomment" %>
+<% end %>
+
+

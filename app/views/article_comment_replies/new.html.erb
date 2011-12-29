@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "normal" %>
+<%= stylesheet_link_tag "others" %>
+<%= stylesheet_link_tag "comment_reply" %>
+
+<div id="comment_reply_region">
+  <div id="comment_content">
+    <%=@comment.content %><br/>
+  </div>
+回复留言
+<%= render 'form' %>
+</div>
+
+
+

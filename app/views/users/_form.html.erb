@@ -1,0 +1,31 @@
+<%= form_for(@user) do |f| %>
+
+  <div class="field">
+    <%= f.label '电子邮箱' %> [用您常用的邮箱进行注册，一个邮箱只能注册一次]
+    <br />
+    <%= f.text_field :email, :class=>"actionTextInput", :size=>'30' %>
+  </div>
+  <div class="field">
+    <%= f.label '设定密码' %><br />
+    <%= f.text_field :password, :size=>'30' %>
+  </div>
+
+  <div class="field">
+    <%= f.label '重复密码' %><br />
+    <%= text_field_tag "repeatPassword", '', :size=>'30' %>
+  </div>
+
+  <div class="field">
+    <%= f.label '你的网名' %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label '邀 请 码' %><br />
+    <%= text_field_tag "inviteCode" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '注册' %>
+  </div>
+<% end %>

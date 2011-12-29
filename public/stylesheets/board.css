@@ -1,0 +1,60 @@
+
+
+.boardHeader{
+    clear:both;
+    height:100px;
+    background-color: #e5eef1;
+}
+
+.boardHeader .boardAvatar{
+    float:left;
+    width:120px;
+    padding:10px;
+}
+
+.boardHeader .rightRegion{
+    text-align:center;
+    border: 0px solid red;
+    height:inherit;
+}
+
+.boardHeader .rightRegion .boardName{
+    float:left;
+    width:400px;
+    padding-top: 24px;
+    text-align:left;
+    vertical-align:middle;
+    display:inline-block;
+    border: 0px solid red;
+    overflow:hidden;
+}
+
+.boardNameFont{
+    font-size:16px;
+    font-weight:bold;
+}
+
+#boardOps{
+    text-align:left;
+    padding:5px;
+    border: 0px solid red;
+}
+
+#boardContainer{
+    clear:both;
+}
+
+#boardContainer #articleList{
+    width:650px;
+    height:600px;
+    border-top: 1px solid #999999;
+    float:left;
+}
+
+#boardContainer #rightPanel{
+    width:300px;
+    height:600px;
+    border: 0px solid blue;
+    background-color: #effafa;
+    float:right;
+}

@@ -1,0 +1,57 @@
+<%= form_for(@article, :html=> {:multipart=>true}) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "文章标题(5-80字)" %><br />
+    <%= f.text_field :title, :size => 80 %>
+  </div>
+  <div class="field">
+    <%= f.label "文章摘要(限120字)" %> <br />
+    <%= f.text_area :abstract, :rows => 3, :cols => 70 %>
+  </div>
+  <div class="field">
+    <%= f.label "所发表主版" %><br />
+    <%= f.select :board_id, Board.all.collect {|b| [ b.try(:name), b.try(:id) ] }, {:include_blank => '请选择所发表的板块'} %>
+  </div>
+  <div>
+    文章题图<br/>
+    <%= image_tag (@article.avatar.url(:medium)) %><br/>
+    <%= f.file_field :avatar, :class=>"uploadFileField"%>
+  </div>
+
+
+  <div class="field">
+    <%= f.label "正文" %><br />
+    <%= f.text_area :content, :id => "kindeditor"%>
+  </div>
+
+  <!--
+  <div class="field">
+    <%= f.label :read_num %><br />
+    <%= f.text_field :read_num %>
+  </div>
+  <div class="field">
+    <%= f.label :useful_num %><br />
+    <%= f.text_field :useful_num %>
+  </div>
+  <div class="field">
+    <%= f.label :star_score %><br />
+    <%= f.text_field :star_score %>
+  </div>
+  -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= kindeditor_javacript_include_tag %>

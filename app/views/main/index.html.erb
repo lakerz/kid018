@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag "main" %>
+
+<div class="boardField">
+    <div>成长主版</div>
+    <% @boards.each do |board| %>
+        <div class="boardBox">
+          <div class="boardTitle"><%= link_to board.name, board_path(board) %> .......</div>
+          <div class="boardPhoto"><%= image_tag (board.avatar.url(:medium)) %></div>
+          <div class="boardDesc"><%= board.memo %></div>
+          <div>
+          </div>
+        </div>
+    <% end %>
+</div>

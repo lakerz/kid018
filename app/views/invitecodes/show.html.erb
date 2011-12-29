@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Code:</b>
+  <%= @invitecode.code %>
+</p>
+
+<p>
+  <b>Create user:</b>
+  <%= @invitecode.create_user_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @invitecode.status %>
+</p>
+
+<p>
+  <b>Enable date:</b>
+  <%= @invitecode.enable_date %>
+</p>
+
+<p>
+  <b>Enable user:</b>
+  <%= @invitecode.enable_user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_invitecode_path(@invitecode) %> |
+<%= link_to 'Back', invitecodes_path %>

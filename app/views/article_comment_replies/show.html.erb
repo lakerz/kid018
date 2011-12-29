@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Comment:</b>
+  <%= @article_comment_reply.comment_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @article_comment_reply.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @article_comment_reply.user_id %>
+</p>
+
+<p>
+  <b>Hide:</b>
+  <%= @article_comment_reply.hide %>
+</p>
+
+
+<%= link_to 'Edit', edit_article_comment_reply_path(@article_comment_reply) %> |
+<%= link_to 'Back', article_comment_replies_path %>

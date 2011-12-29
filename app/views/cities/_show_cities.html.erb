@@ -1,0 +1,8 @@
+<%@cities.each do |c| %>
+    <%= link_to c.name, main_path, :class=>"set_city", :method => "get" , :value=>c.id%> |
+<%end%>
+<div style="text-align:right">
+  <%=link_to "其他省市...", provinces_display_all_path, :method=>"get", :remote=>true %>
+</div>
+
+<%= javascript_include_tag "page_js/set_cities" %>

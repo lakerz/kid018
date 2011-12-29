@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag "board" %>
+<%= stylesheet_link_tag "articleList" %>
+
+<div>
+    <div class="boardHeader">
+      <div class="boardAvatar">
+        <%= image_tag (@board.avatar.url(:medium)) %>
+      </div>
+      <div class="rightRegion">
+        <div class="boardName">
+          <span class="boardNameFont"><%= @board.name %></span>   <br/>
+          <%= @board.memo %>
+        </div>
+      </div>
+    </div>
+    <div id="boardOps">
+      <%= link_to '发表文章', new_article_path(:board_id => @board) %>
+    </div>
+    <div id="boardContainer">
+        <div id="articleList">
+        <% @articles.each do |article| %>
+            <div class="articleItem">
+                <div class="articleAvatar">
+                    <%= image_tag (article.avatar.url(:medium)) %>
+                </div>
+                <div class="articleContent">
+                    <div class="articleLine">
+                        <div class="articleTitle" >
+                          <%= link_to article.title, article_path(article, :page=>1) %>
+                        </div>
+                        <div class="articleData">关注:120 | 阅读:3200</div>
+                    </div>
+                    <div class="articleAuthor">2011-5-12 20:33 ABC</div>
+                    <div class="articleAbstract"><%=article.abstract %></div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        <% end %>
+        </div>
+  <div id="rightPanel">
+
+  </div>
+</div>
+
+    <div style="clear:both;">
+    <%= link_to 'Edit', edit_board_path(@board) %> |
+    <%= link_to 'Back', boards_path %>
+    </div>
+</div>

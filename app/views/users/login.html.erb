@@ -1,0 +1,20 @@
+<h1>欢迎登录</h1>    <br/>
+
+<%if @error %>
+    <div class="error"><%=@error_message%></div><br/>
+<%end %>
+
+<% form_tag login_check_users_path, :id=>'loginForm' do %>
+  邮箱 <%= text_field_tag "loginName",@login_name?@login_name:"", :size=>30%> <br/><br/>
+  密码 <%= password_field_tag "password","", :size=>30%> <br/><br/>
+  <%= hidden_field_tag "source_type", @source_type %>
+  <%= hidden_field_tag "source_page", @source_page %>
+  <%= submit_tag "登录"%>
+<% end %>
+
+<% content_for :js_loaded do  %>
+    <%= javascript_include_tag "plugins/jquery.validate.min" %>
+    <%= javascript_include_tag "plugins/additional-methods.min" %>
+    <%= javascript_include_tag "plugins/validation_message_cn" %>
+    <%= javascript_include_tag "page_js/user_login" %>
+<% end %>

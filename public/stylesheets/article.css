@@ -1,0 +1,341 @@
+#showArticleMain{
+    width:99%;
+}
+
+#showArticleMain #articleRegion{
+    width:650px;
+    border-top: 0px solid #999999;
+    float:left;
+    background-color: #ffffff;
+}
+
+#showArticleMain #rightPanel{
+    width:300px;
+    height:600px;
+    border: 0px solid blue;
+    background-color: #effafa;
+    float:right;
+}
+
+#showArticleMain #articleRegion #title{
+    font-size:18px;
+    font-weight:bold;
+    color: #333;
+    border-bottom:1px dotted #999999;
+}
+
+#showArticleMain #articleRegion #authorRegion{
+    padding:10px;
+}
+
+#showArticleMain #articleRegion #authorRegion #authorAvatar{
+    width:70px;
+    float:left;
+}
+
+#showArticleMain #articleRegion #authorRegion #authorInfo{
+    font-size:12px;
+    color: #666;
+    float:left;
+    line-height:23px;
+}
+
+#showArticleMain #articleRegion #abstractRegion{
+    margin-top:10px;
+    padding:10px;
+    border: 1px solid #cccccc;
+    background-color: #eaf7f7;
+}
+
+#showArticleMain #articleRegion #abstractRegion #abstractAvatar{
+    width: 150px;
+    float: left;
+}
+
+#showArticleMain #articleRegion #abstractRegion #abstract{
+    width: 460px;
+    float:left;
+    font-size:12px;
+    color: #666;
+}
+
+#showArticleMain #articleRegion #content{
+    font-size:14px;
+    margin-top:15px;
+    padding:15px 10px;
+    border: 1px solid #cccccc;
+    line-height:25px;
+}
+
+#showArticleMain #articleRegion #content p{
+    font-size:14px;
+    line-height:25px;
+}
+
+#showArticleMain #articleRegion #commentRegion {
+
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion {
+    border: 1px solid #006699;
+    margin-top:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion #lightedText{
+    font-size:14px;
+    font-weight:bold;
+    color: #cc0000;
+    padding:5px 10px;
+    width: inherit;
+    border-bottom:1px solid #006699;
+    background-color: #ffff99;
+}
+
+#showArticleMain #articleRegion #commentRegion .reply{
+    padding: 10px;
+    background-color: #cee4fa;
+    border: 1px solid #cccccc;
+    margin-top:15px;
+}
+
+#showArticleMain #articleRegion #commentRegion .reply textarea{
+    width:98%;
+    height:80px;
+}
+
+#showArticleMain #articleRegion #commentRegion .reply #login_first{
+    background-image:url(/images/views/comment_pic.jpg);
+    background-repeat:no-repeat;
+    text-align:center;
+    padding-top:40px;
+    width:660px;
+    height:80px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList{
+
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height:100%;
+    overflow:hidden;
+    margin-top:10px;
+    background-color: #f9f6dd;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .userAvatar{
+    float:left;
+    padding-top:5px;
+    padding-left:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion{
+    float:left;
+    padding-top:2px;
+    width:550px;
+    padding-left:20px;
+    padding-bottom:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentUserInfo{
+    border-bottom:1px dotted #cccccc;
+    overflow:hidden;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentUserInfo .commentUser{
+    float:left;
+    width:60%;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentUserInfo .commentOps{
+    float:right;
+    width:30%;
+    text-align:right;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentContent{
+    font-size:14px;
+    padding-left:10px;
+    padding-top:10px;
+    clear:both;
+    line-height:23px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .userMessage{
+    font-size:12px;
+    color: #006666;
+    text-align:left;
+    margin-top:8px;
+    margin-left:10px;
+    border-top:1px dashed;
+    padding-top:5px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .replyComment{
+    font-size:12px;
+    text-align:right;
+    padding-right:40px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentReplyRegion{
+    border:1px solid #CCCCCC;
+    overflow:hidden;
+    background-color: #ebe9e9;
+    margin-top:8px;
+    margin-left:8px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem{
+    margin:10px;
+    padding:6px;
+    border:0px solid #CCCCCC;
+    overflow:hidden;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemUserAvatar{
+    float:left;
+    padding-top:5px;
+    padding-left:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemRightRegion{
+    float:left;
+    padding-top:2px;
+    width:400px;
+    padding-left:20px;
+    padding-bottom:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemRightRegion .commentReplyItemUserInfo{
+    border-bottom:1px dotted #cccccc;
+    font-size:12px;
+    color:#666666;
+    overflow:hidden;
+}
+
+#showArticleMain #articleRegion #commentRegion #commentList .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemRightRegion .commentReplyItemContent{
+    font-size:12px;
+    padding-left:10px;
+    padding-top:10px;
+    clear:both;
+    line-height:23px;
+}
+
+#inline_content textarea{
+    width:500px;
+    height:100px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem{
+    border-top: 0px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height:100%;
+    overflow:hidden;
+    margin:10px;
+
+    background-color: #ffffff;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .userAvatar{
+    float:left;
+    padding-top:5px;
+    padding-left:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion{
+    float:left;
+    padding-top:2px;
+    width:550px;
+    padding-left:20px;
+    padding-bottom:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentUserInfo{
+    border-bottom:1px dotted #cccccc;
+    overflow:hidden;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentUserInfo .commentUser{
+    float:left;
+    width:60%;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentUserInfo .commentOps{
+    float:right;
+    width:30%;
+    text-align:right;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentContent{
+    font-size:14px;
+    padding-left:10px;
+    padding-top:10px;
+    clear:both;
+    line-height:23px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .userMessage{
+    font-size:12px;
+    color: #006666;
+    text-align:left;
+    margin-top:8px;
+    margin-left:10px;
+    border-top:1px dashed;
+    padding-top:5px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .replyComment{
+    font-size:12px;
+    text-align:right;
+    padding-right:40px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentReplyRegion{
+    border:1px solid #CCCCCC;
+    overflow:hidden;
+    background-color: #ebe9e9;
+    margin-top:8px;
+    margin-left:8px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem{
+    margin:10px;
+    padding:6px;
+    border:0px solid #CCCCCC;
+    overflow:hidden;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemUserAvatar{
+    float:left;
+    padding-top:5px;
+    padding-left:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemRightRegion{
+    float:left;
+    padding-top:2px;
+    width:400px;
+    padding-left:20px;
+    padding-bottom:10px;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemRightRegion .commentReplyItemUserInfo{
+    border-bottom:1px dotted #cccccc;
+    font-size:12px;
+    color:#666666;
+    overflow:hidden;
+}
+
+#showArticleMain #articleRegion #commentRegion #lightedCommentRegion .commentItem .commentContentRegion .commentReplyRegion .commentReplyItem .commentReplyItemRightRegion .commentReplyItemContent{
+    font-size:12px;
+    padding-left:10px;
+    padding-top:10px;
+    clear:both;
+    line-height:23px;
+}
+
+
+
+

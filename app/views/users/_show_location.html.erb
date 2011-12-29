@@ -1,0 +1,6 @@
+<%if @current_user.city %>
+    <% @cities = City.find_all_by_province_id(@current_user.city.province_id) %>
+    <%= render :template => 'cities/_show_cities' %>
+<%else%>
+    <%= render :template => 'provinces/_show_provinces' %>
+<%end%>

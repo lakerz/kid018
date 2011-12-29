@@ -1,0 +1,15 @@
+<div id="normalAction">
+  <h1>欢迎加入</h1>
+  <div class="fieldRegion">
+    <%= render 'form' %>
+  </div>
+</div>
+
+<%= link_to 'Back', users_path %>
+
+<% content_for :js_loaded do  %>
+    <%= javascript_include_tag "plugins/jquery.validate.min" %>
+    <%= javascript_include_tag "plugins/additional-methods.min" %>
+    <%= javascript_include_tag "plugins/validation_message_cn" %>
+    <%= javascript_include_tag "page_js/user_register" %>
+<% end %>

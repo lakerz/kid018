@@ -1,0 +1,53 @@
+.articleItem{
+    width:98%;
+    padding: 15px 5px 15px 5px;;
+    border: 0px solid blue;
+    border-bottom: 1px dashed #999999;
+}
+
+.articleItem .articleAvatar{
+    width: 150px;
+    float:left;
+}
+
+.articleItem .articleContent{
+    width: 480px;
+    float:left;
+}
+
+.articleItem .articleLine{
+    width: 100%;
+}
+
+.articleItem .articleLine .articleTitle{
+    font-size:14px;
+    font-weight:bold;
+    width:60%;
+    color: red;
+    float:left;
+}
+
+.articleItem .articleLine .articleData{
+    font-size:12px;
+    color: #666666;
+    text-align:right;
+    width:40%;
+    float:left;
+}
+
+.articleItem .articleAuthor{
+    font-size:12px;
+    color: #666666;
+    text-align:left;
+    clear:both;
+    background-color: #ebf4f7;
+}
+
+.articleItem .articleAbstract{
+    padding-top:8px;
+    font-size:12px;
+    color: #444444;
+    text-align:left;
+    line-height:20px;
+    clear:both;
+}

@@ -1,0 +1,40 @@
+<div class="commentItem" id="comment_<%= article_comment.id %>">
+  <div class="userAvatar">
+     <%= image_tag("user-avatar.jpg") %>
+  </div>
+  <div class="commentContentRegion">
+    <div class="commentUserInfo">
+      <div class="commentUser">
+        静观云远 (厦门) <span class="font11px"><%= article_comment.updated_at %></span>
+      </div>
+      <div class="commentOps">
+          <%= render :template => 'article_comments/_light', :locals => {:article_comment=>article_comment}  %>
+      </div>
+    </div>
+    <div class="commentContent" >
+        <%= article_comment.content %>
+    </div>
+    <div class="userMessage">
+        脑残到处有 贴吧特别多
+    </div>
+    <div class="replyComment">
+      <% if @current_user%>
+          <% if @current_user.can_reply %>
+            <a id = "comment_<%= article_comment.id%>" class='inline' href="#inline_content" onclick="document.getElementById('comment_id').value='<%=article_comment.id%>'">回复</a>
+          <%end%>
+      <%else%>
+            <a class='login_pop' href="#inline_login">回复</a>
+      <%end%>
+
+    </div>
+
+    <% if article_comment.article_comment_replies.size > 0 %>
+        <div class="commentReplyRegion" id="commentReplyRegion_<%=article_comment.id %>">
+          <a name="comment_<%=article_comment.id %>"></a>
+              <% article_comment.article_comment_replies.each do |article_comment_reply| %>
+                   <%= render(article_comment_reply) %>
+              <% end %>
+        </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<h1>Listing article_comment_replies</h1>
+
+<table>
+  <tr>
+    <th>Comment</th>
+    <th>Content</th>
+    <th>User</th>
+    <th>Hide</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @article_comment_replies.each do |article_comment_reply| %>
+  <tr>
+    <td><%= article_comment_reply.comment_id %></td>
+    <td><%= article_comment_reply.content %></td>
+    <td><%= article_comment_reply.user_id %></td>
+    <td><%= article_comment_reply.hide %></td>
+    <td><%= link_to 'Show', article_comment_reply %></td>
+    <td><%= link_to 'Edit', edit_article_comment_reply_path(article_comment_reply) %></td>
+    <td><%= link_to 'Destroy', article_comment_reply, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article comment reply', new_article_comment_reply_path %>

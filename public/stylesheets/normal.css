@@ -1,0 +1,128 @@
+body {
+    font-family:'lucida grande',tahoma,helvetica,arial,'bitstream vera sans',sans-serif;
+    font-size: 12px;
+    margin: 0px auto;
+    height: auto;
+    width: 980px;
+    border: 0px solid #006633;
+}
+
+a:link{text-decoration:none; color: #006699;}
+a:visited {text-decoration:none; color:#006699; }
+a:hover {text-decoration:underline;color:#006699;}
+
+img{
+    border:none;
+}
+
+input{
+    font-family:'lucida grande',tahoma,helvetica,arial,'bitstream vera sans',sans-serif;
+    font-size:12px;
+}
+.font11px{
+    font-size: 11px;
+}
+
+.uploadFileField{
+    font-size:12px;
+    width: 250px;
+}
+
+.error{
+    color:red;
+    padding-left:5px;
+}
+
+#errorBox{
+    color: #ff6666;
+    font-size:12px;
+}
+
+.font14px{
+    font-size:14px;
+}
+
+textarea{
+    font-size:12px;
+    color:#333;
+}
+
+.file_upload{
+    width:200px;
+}
+
+#logo{
+    float:left;
+    width:220px;
+}
+
+#login{
+    float:right;
+}
+
+#normalAction{
+    border: 1px solid #cccccc;
+    padding:10px 20px;
+}
+
+.pagination {
+  padding: 3px;
+  margin: 3px;
+}
+
+.pagination a {
+  padding: 2px 4px 2px 4px;
+  margin: 2px;
+  border: 1px solid #aaaadd;
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.pagination a:hover, .pagination a:active {
+  border: 1px solid #0066cc;
+  color: #000;
+}
+
+.pagination em.current {
+  padding: 2px 4px 2px 4px;
+  margin: 2px;
+  border: 1px solid #0066cc;
+  font-weight: bold;
+  background-color: #0066cc;
+  color: #FFF;
+  font-style:normal;
+}
+
+.pagination span.disabled {
+  padding: 2px 4px 2px 4px;
+  margin: 2px;
+  border: 1px solid #eee;
+  color: #ddd;
+}
+
+#message_container{
+    height: 20px;
+}
+
+#fadeInMessage{
+    padding:3px 5px;
+    border: 1px solid #cc0000;
+    background-color: #ffffcc;
+    color: #006699;
+    width:300px;
+    display:none;
+}
+
+#floating_fade_message{
+    position:absolute;
+    padding:3px 5px;
+    border: 1px solid #333333;
+    background-color: #999999;
+    color: #ff0000;
+    width:300px;
+    top: 200px;
+    left:300px;
+    z-index:10;
+    display:none;
+}
+

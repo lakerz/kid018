@@ -1,0 +1,36 @@
+<%= stylesheet_link_tag "jquery-ui-1.8.16.custom" %>
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+</script>
+<div id="tabs">
+　　<ul>
+　　　　<li><a href="#tabs1">个人信息设置</a></li>
+　　　　<li><a href="#tabs2" rel="ajax.htm">tabs2</a></li>
+　　</ul>
+
+    <div id="tabs1">Hello World!
+      <%case @current_user.life_status %>
+          <%when "unconfirmed" %>
+          邮箱尚未认证，您可以<%=link_to "再次发送认证邮件", send_confirmation_mail_user_path(@current_user) %>
+          <%when "normal" %>
+          <%= render :template => 'users/_normal_main_page' %>
+          <%when "disable" %>
+          禁止
+      <%end%>
+    </div>
+
+　　<div id="tabs2"></div>
+
+</div>
+
+
+
+<% content_for :js_loaded do  %>
+    <%= javascript_include_tag "plugins/jquery.validate.min" %>
+    <%= javascript_include_tag "plugins/additional-methods.min" %>
+    <%= javascript_include_tag "plugins/validation_message_cn" %>
+    <%= javascript_include_tag "page_js/user_setting" %>
+    <%= javascript_include_tag "plugins/jquery-ui-1.8.16.custom.min.js" %>
+<% end %>

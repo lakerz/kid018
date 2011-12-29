@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="en" lang="en">
+<head>
+  <title>家有宝贝kid018:全面关注孩子0到18岁的健康成长</title>
+  <%=stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/cupertino/jquery-ui.css" %>
+  <%=stylesheet_link_tag "scaffold","normal" %>
+  <%= stylesheet_link_tag "colorbox.css" %>
+  <%= javascript_include_tag :all, :recursive => false%>
+</head>
+<body>
+<div>
+    <div id="logo">
+        <%= link_to image_tag("logo.jpg"), main_path %>
+    </div>
+    <div id="login">
+        <%= render :template => 'users/_user_login' %>
+    </div>
+    <div style="clear:both" id="a-1"></div>
+
+    <%= yield %>
+
+    <%= render :template => 'users/login_partial'%>
+</div>
+</body>
+</html>
+<!-- include javascripts -->
+<%= csrf_meta_tag %>
+<%=javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js") %>
+
+<!--//include javascripts //-->
+<%= yield :js_loaded %>

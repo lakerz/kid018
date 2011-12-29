@@ -1,0 +1,3 @@
+//$("#comment"+@article_comment.id).html("BC")
+jQuery().colorbox.close();
+$("#commentReplyRegion_<%=@article_comment.id%>").append("<%=  escape_javascript(render(:partial => @article_comment_reply)) %>")

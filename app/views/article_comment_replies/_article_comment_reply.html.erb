@@ -1,0 +1,14 @@
+    <div class="commentReplyItem">
+        <div class="commentReplyItemUserAvatar">
+            <%= image_tag("user-avatar2.jpg") %>
+        </div>
+        <div class="commentReplyItemRightRegion">
+            <div class="commentReplyItemUserInfo">
+                没人不听话 发表于 <span class="font11px" ><%= article_comment_reply.updated_at %></span>
+            </div>
+            <div class="commentReplyItemContent">
+                <%= article_comment_reply.content %>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </div>

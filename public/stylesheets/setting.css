@@ -1,0 +1,29 @@
+table {
+    width:600px;
+}
+
+td{
+    padding:5px 0px;
+    vertical-align: top;
+}
+
+label{
+    font-size:14px;
+    color: #cc6600;
+    text-align:right;
+}
+
+.action{
+    color: #003399;
+}
+
+#div_reset_avatar, #div_change_email, #div_change_name, #div_change_city{
+    display:none;
+    padding: 5px 5px;
+    background-color: #e7fae7;
+}
+
+ #div_change_city{
+    padding: 8px 8px;
+    line-height:25px;
+}

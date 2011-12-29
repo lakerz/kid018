@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Article:</b>
+  <%= @article_comment.article_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @article_comment.content %>
+</p>
+
+<p>
+  <b>Linked comment:</b>
+  <%= @article_comment.linked_comment_id %>
+</p>
+
+<p>
+  <b>Lighted:</b>
+  <%= @article_comment.lighted %>
+</p>
+
+<p>
+  <b>Hide:</b>
+  <%= @article_comment.hide %>
+</p>
+
+<p>
+  <b>Log:</b>
+  <%= @article_comment.log %>
+</p>
+
+
+<%= link_to 'Edit', edit_article_comment_path(@article_comment) %> |
+<%= link_to 'Back', article_comments_path %>

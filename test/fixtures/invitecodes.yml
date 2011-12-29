@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  create_user_id: 
+  status: false
+  enable_date: 2011-11-26 11:27:21
+  enable_user_id: 1
+
+two:
+  code: MyString
+  create_user_id: 
+  status: false
+  enable_date: 2011-11-26 11:27:21
+  enable_user_id: 1

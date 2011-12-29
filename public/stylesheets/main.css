@@ -1,0 +1,29 @@
+.boardField{
+    padding:10px;
+}
+
+.boardField .boardBox{
+    width:208px;
+    height:160px;
+    padding:5px;
+    float:left;
+    margin:0 5px 10px;
+    border:1px solid #ccc;
+    display:inline
+}
+
+.boardField .boardBox .boardTitle{
+    margin-bottom:6px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.boardField .boardBox .boardPhoto{
+    float:left;
+    width:80px;
+}
+
+.boardField .boardBox .boardDesc{
+    float:right;
+    width:120px;
+}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  article_id: 1
+  status: false
+  cancel_date: 2011-12-26 09:15:16
+
+two:
+  user_id: 1
+  article_id: 1
+  status: false
+  cancel_date: 2011-12-26 09:15:16

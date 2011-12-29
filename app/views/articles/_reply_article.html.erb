@@ -1,0 +1,16 @@
+<div class="reply">
+  <% if @current_user %>
+      <% form_tag(article_comments_path) do %>
+          <%= hidden_field_tag "article_id", @article.id %>
+          <%= text_area_tag "replyContent", "" %> <br/>
+          <%= submit_tag("留言")  %>
+      <% end %>
+    <%else%>
+        <div id="login_first">
+          <a class='login_pop' href="#inline_login">请登录后留言</a>
+          或
+          <%=link_to "快速注册", new_user_path %>
+        </div>
+    <%end%>
+
+</div>

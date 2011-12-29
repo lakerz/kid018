@@ -1,0 +1,33 @@
+<h1>Listing article_comments</h1>
+
+<table>
+  <tr>
+    <th>Article</th>
+    <th>Content</th>
+    <th>Linked comment</th>
+    <th>Lighted</th>
+    <th>Hide</th>
+    <th>Log</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @article_comments.each do |article_comment| %>
+  <tr>
+    <td><%= article_comment.article_id %></td>
+    <td><%= article_comment.content %></td>
+    <td><%= article_comment.linked_comment_id %></td>
+    <td><%= article_comment.lighted %></td>
+    <td><%= article_comment.hide %></td>
+    <td><%= article_comment.log %></td>
+    <td><%= link_to 'Show', article_comment %></td>
+    <td><%= link_to 'Edit', edit_article_comment_path(article_comment) %></td>
+    <td><%= link_to 'Destroy', article_comment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article comment', new_article_comment_path %>
